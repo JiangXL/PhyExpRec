@@ -3,7 +3,7 @@ import RPi.GPIO as GPIO
 import time
 channel =4  # GPIO 4
 
-data = []  
+data = []
 j = 0
 GPIO.setmode(GPIO.BCM)
 time.sleep(1)
@@ -62,7 +62,7 @@ GPIO.cleanup()
 
 
 #-------------------Temp_Humidity-------------------------------
-#|     Time  | Version | Contribution | Comment 
+#|     Time  | Version | Contribution | Comment
 #| 2017.5.1 5|  0      | Gavin        | fork form http://guojianxiang.com/posts/2015-11-26-RP_Controle_Dht11.html
-#| 2017.6.16 | 0.6     | H.F.         | 
+#| 2017.6.16 | 0.6     | H.F.         |
 #---------------------------------------------------------------
