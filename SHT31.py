@@ -32,7 +32,7 @@ print "Temperature in Celsius is : %.2f C" %cTemp
 print "Relative Humidity is : %.2f %%RH" %humidity
 
 try:
-    record = open('/home/pi/Desktop/SHT31.txt', 'a')    # 打开文件
+    record = open('/home/pi/Desktop/SHT31.txt', 'w')    # 打开文件
     record.write(str(ticks))
     record.write(str(cTemp))          # 添加数据到文件
     record.write(str(humidity))
