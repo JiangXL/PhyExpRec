@@ -27,7 +27,7 @@ humidity = 100 * (data[3] * 256 + data[4]) / 65535.0
 ticks = time.time()
 
 # Output data to screen
-print "Time :",ticks
+print(ticks)
 print "Temperature in Celsius is : %.2f C" %cTemp
 print "Relative Humidity is : %.2f %%RH" %humidity
 
