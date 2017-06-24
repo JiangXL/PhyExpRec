@@ -48,15 +48,16 @@ for i in range(8):
   temperature_point += temperature_point_bit[i] * 2 ** (7-i)
   check += check_bit[i] * 2 ** (7-i)
 tmp = humidity + humidity_point + temperature + temperature_point
-if check == tmp:
-  print "temperature :", temperature, "*C, humidity :", humidity, "%"
-else:
-  print "wrong"
-  print "temperature :", temperature, "*C, humidity :", humidity, "% check :", check, ", tmp :", tmp
+#if check == tmp:
+#  print "temperature :", temperature, "*C, humidity :", humidity, "%"
+#else:
+#  print "wrong"
+#  print "temperature :", temperature, "*C, humidity :", humidity, "% check :", check, ", tmp :", tmp
 
-humidity='{"value":%f}'%humidity
-output= open('/home/pi/Desktop/Temp_humidity.txt','w')
-output.write(humidity)
+output= open('/home/pi/Desktop/DHT11.txt','a')
+output.write(str(time.time())+",")
+output.write(str(temperature)+",")
+output.write(str(humidity)+","+'\n')
 output.close
 GPIO.cleanup()
 
@@ -64,5 +65,5 @@ GPIO.cleanup()
 #-------------------Temp_Humidity-------------------------------
 #|     Time  | Version | Contribution | Comment
 #| 2017.5.1 5|  0      | Gavin        | fork form http://guojianxiang.com/posts/2015-11-26-RP_Controle_Dht11.html
-#| 2017.6.16 | 0.6     | H.F.         |
+#| 2017.6.24 | 1     | H.F.         |
 #---------------------------------------------------------------
