@@ -7,4 +7,9 @@ Used Device:
 
 # How
 
+# To do
++ 时间戳--> 当地时间
++ GUI实时预览
++ 数据备份
+
 # License
