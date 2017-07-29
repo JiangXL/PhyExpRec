@@ -1,8 +1,8 @@
-#-------------------SHT31-------------------------------
+#-------------------SHT31-------------------------------------------------------
 #|     Time  | Version | Contribution | Comment
 #| 2017.6.22|  0       |  fork form http://www.pibits.net/code/raspberry-pi-sht31-sensor-example.php
 #| 2017.6.24 | 1     | H.F.         | Work :)
-#---------------------------------------------------------------
+#-------------------------------------------------------------------------------
 import smbus
 import time
 
@@ -32,11 +32,10 @@ ticks = time.time()
 #print "Relative Humidity is : %.2f %%RH" %humidity
 
 try:
-    record = open('/home/pi/Desktop/SHT31.txt', 'a')    
+    record = open('/home/pi/Desktop/SHT31.txt', 'a')
     record.write(str(ticks)+",")
-    record.write(str(cTemp)+",")           
+    record.write(str(cTemp)+",")
     record.write(str(humidity)+","+"\n")
 finally:
     if record:
         record.close()
-# http://www.pibits.net/wp-content/uploads/2016/11/pi-and-sht31_bb.png
