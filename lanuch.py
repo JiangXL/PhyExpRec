@@ -43,7 +43,7 @@ if __name__ == '__main__':
     p_box3bot = multiprocessing.Process(target = box3bot.record, args = ())
     #p_env = multiprocessing.Process(target = env.record, args = ())
     p_PC30 = multiprocessing.Process(target = PC30.record, args = ())
-    p_PC60 = multiprocessing.Process(target = PC60.record, args = ())    
+    p_PC60 = multiprocessing.Process(target = PC60.record, args = ())
 
     p_box1top.start()
     p_box1bot.start()
@@ -54,7 +54,7 @@ if __name__ == '__main__':
     #p_env.start()
     p_PC30.start()
     p_PC60.start()
-    
+
 
 ############## To Do: Pool ############################
 #    p = Pool(4)
