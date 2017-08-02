@@ -10,6 +10,9 @@ Used Device:
 python launch.py
 ```
 
+# Reading List
++ [1 to 8 IIC](https://learn.adafruit.com/adafruit-tca9548a-1-to-8-i2c-multiplexer-breakout/wiring-and-test)
++ i2cdetect -y 1
 # To do
 + 时间戳--> 当地时间
 + GUI实时预览
