@@ -11,18 +11,18 @@ import time
 bus = smbus.SMBus(1)
 
 time0=time.strftime("%Y%m%d%H%M",time.localtime())
-datestore='/home/pi/Desktop/SHT/'+'SHTOUT'+time0+'.txt'
+datestore='/home/pi/Desktop/SHT/'+time0+'SHTUP'+'.txt'
 ticks0=time.time()
 while True:
 	# SHT31 address, 0x44(68)
-	bus.write_i2c_block_data(0x45, 0x2C, [0x06])
+	bus.write_i2c_block_data(0x44, 0x2C, [0x06])
 
 	time.sleep(0.5)
 
 	# SHT31 address, 0x44(68)
 	# Read data back from 0x00(00), 6 bytes
 	# Temp MSB, Temp LSB, Temp CRC, Humididty MSB, Humidity LSB, Humidity CRC
-	data = bus.read_i2c_block_data(0x45, 0x00, 6)
+	data = bus.read_i2c_block_data(0x44, 0x00, 6)
 
 	# Convert the data
 	temp = data[0] * 256 + data[1]
