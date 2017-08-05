@@ -43,7 +43,7 @@ class SHT31(object):
 	    ticks = time.time()
 
 	    # Output data to screen
-	    print("%.2f "%(ticks-ticks0)+"Temp%.2f "%cTemp+"RH%.2f"%humidity)
+	    print("%.2f"%(ticks-ticks0)+" Box%.0f"%self.box+" "+self.place+" "+"Temp%.2f "%cTemp+"RH%.2f"%humidity)
 
 	    try:
 		record = open(datestore, 'a')

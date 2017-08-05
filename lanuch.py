@@ -25,12 +25,13 @@ box1top = SHT31(3,'Top','30%')
 box1bot = SHT31(3,'Bottom','30%')
 box2top = SHT31(4,'Top','60%')
 box2bot = SHT31(4,'Bottom','60%')
-box3top = SHT31(5,'Top','90%')
-box3bot = SHT31(5,'Bottom','90%')
+box3top = SHT31(5,'Top','100%')
+box3bot = SHT31(5,'Bottom','100%')
 
 PC30 = SHT31(6,'Top','30%PC')
 PC60 = SHT31(7, 'Top','60%PC')
 
+Env = SHT31(8,'Top', 'Air')
 
 # multiprocessing
 if __name__ == '__main__':
@@ -44,14 +45,14 @@ if __name__ == '__main__':
     #p_env = multiprocessing.Process(target = env.record, args = ())
     p_PC30 = multiprocessing.Process(target = PC30.record, args = ())
     p_PC60 = multiprocessing.Process(target = PC60.record, args = ())
-
+    p_Env = multiprocessing.Process(target = Env.record, args = ())
     p_box1top.start()
     p_box1bot.start()
     p_box2top.start()
     p_box2bot.start()
     p_box3top.start()
     p_box3bot.start()
-    #p_env.start()
+    p_Env.start()
     p_PC30.start()
     p_PC60.start()
 
